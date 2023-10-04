@@ -1,41 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ml_sortowanie.MainPage">
+             x:Class="ml_sortowanie.MainPage"
+             Title="Losowanie">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+    <StackLayout Padding="20">
+        <RadioButton Content="Litery" IsChecked="True"/>
+        <RadioButton Content="Liczby" x:Name="lCheck"/>
+        <Entry Keyboard="Numeric" Placeholder="Ilość znaków" x:Name="ilosc"/>
+        <Picker x:Name="tryb">
+            <Picker.Items>
+                <x:String>Od Największego</x:String>
+                <x:String>Od Najmniejszego</x:String>
+                <x:String>Losowo</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button Text="Generuj" x:Name="generuj" Clicked="generuj_Clicked" Margin="0,0,0,50"/>
+        <Button Text="Posortowane" x:Name="sort" Clicked="sort_Clicked" Margin="0,0,0,10" IsEnabled="False"/>
+        <Button Text="Nie posortowane" x:Name="nosort" Clicked="nosort_Clicked" Margin="0,0,0,10" IsEnabled="False"/>
+        <Button Text="Statystyki" x:Name="stats" Clicked="stats_Clicked" IsEnabled="False"/>
+    </StackLayout>
 
 </ContentPage>
