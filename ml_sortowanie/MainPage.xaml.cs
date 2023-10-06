@@ -80,7 +80,7 @@
 
         private void stats_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new Statystyki(data));
         }
 
        

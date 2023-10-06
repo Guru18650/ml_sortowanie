@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ml_sortowanie.Statystyki"
              Title="Statystyki">
-    <VerticalStackLayout>
+    <ScrollView>
         <ListView x:Name="lista">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -11,5 +11,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
